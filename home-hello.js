@@ -122,15 +122,15 @@ function randomGreeting(greetingArray) {
 }
 
 var greeting = new String("Howdy.")
-if (hour < 5 && hour >= 1) { // 1am - 5am
+if (hour >= 23 && hour < 5) { // 11pm - 5am
 	greeting = greetingsLateNight[randomGreeting(greetingsLateNight)];
-} else if (hour >= 23 || hour < 1) { // 11pm - 1am
+} else if (hour >= 21 || hour < 23) { // 9pm - 11pm
 	greeting = greetingsNight[randomGreeting(greetingsNight)];
 } else if (hour < 12) { // Before noon (5am - 12pm)
 	greeting = greetingsMorning[randomGreeting(greetingsMorning)];
 } else if (hour >= 12 && hour <= 17) { // 12pm - 5pm
 	greeting = greetingsAfternoon[randomGreeting(greetingsAfternoon)];
-} else if (hour > 17 && hour < 23) { // 5pm - 11pm
+} else if (hour > 17 && hour < 21) { // 5pm - 9pm
 	greeting = greetingsEvening[randomGreeting(greetingsEvening)];
 } 
 
