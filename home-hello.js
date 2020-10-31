@@ -162,12 +162,12 @@ widgetHello.addSpacer(parseInt(spacing));
 
 // Greeting label
 let hello = widgetHello.addText(greeting);
-hello.font = Font.boldSystemFont(42);
+hello.font = Font.boldSystemFont(39);
 hello.textColor = themeColor;
 
 // Date label
 let datetext = widgetHello.addText(datefull); 
-datetext.font = Font.regularSystemFont(16);
+datetext.font = Font.regularSystemFont(20);
 datetext.textColor = themeColor;
 
 // Bottom Spacer
